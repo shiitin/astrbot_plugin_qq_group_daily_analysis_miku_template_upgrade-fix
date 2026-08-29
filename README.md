@@ -13,28 +13,25 @@
 
 > 新生成的日报已自带修复，本脚本只用于抢救历史日报文件。
 
+## 下载（按你的系统选一个就行）
+
+| 你的系统 | 下载这个文件 | 怎么运行 |
+|---------|------------|---------|
+| Windows | replace_miku_image_url.bat | 双击 |
+| macOS | replace_miku_image_url.command | 双击 |
+| Linux | replace_miku_image_url.sh | 双击（选"运行"），或终端执行 |
+
 ## 用法
 
-把本仓库的脚本放到日报 HTML 文件所在目录（含 report_*.html 等日报文件的目录，通常在 data/html 下）：
+1. 下载对应脚本，放到日报 HTML 文件所在目录（含 report_*.html 的目录，通常在 data/html 下）
+2. 双击运行（Windows/macOS 直接双击；Linux 双击后选「运行」）
+3. 脚本会自动扫描该目录（含子目录）下所有 .html，把失效的 img.heliar.top 链接替换为 jsDelivr 直链，替换完会列出改了哪些文件
 
-```
-.../data/html/
-```
+## 双击没反应的备用方式（命令行）
 
-然后运行：
-
-- Windows：双击 replace_miku_image_url.bat
-- Linux / macOS：bash replace_miku_image_url.sh
-
-脚本会自动扫描该目录（含子目录）下所有 .html 文件，把失效的 img.heliar.top 链接替换为 jsDelivr 直链，替换完会列出改了哪些文件。
+- Windows：在目录空白处 Shift+右键 → 在此处打开命令窗口 → 输入 replace_miku_image_url.bat
+- Linux / macOS：终端里进入该目录，执行 bash replace_miku_image_url.sh
 
 ## 效果
 
 替换后历史日报的装饰图改由 jsDelivr CDN 托管，恢复显示。
-
-## 文件
-
-| 文件 | 用途 |
-|------|------|
-| replace_miku_image_url.sh | Linux / macOS 用（依赖 python3） |
-| replace_miku_image_url.bat | Windows 用（依赖自带 PowerShell） |
