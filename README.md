@@ -24,7 +24,8 @@
 ## 用法
 
 1. 下载对应脚本，放到日报 HTML 文件所在目录（含 report_*.html 的目录，通常在 data/html 下）
-2. 双击运行（Windows/macOS 直接双击；Linux 双击后选「运行」）
+2. 双击运行（Windows 直接双击；Linux 双击后选「运行」）
+   - macOS 从 zip 解压后若双击提示无权限，先在终端执行一次 chmod +x replace_miku_image_url.command 再双击
 3. 脚本会自动扫描该目录（含子目录）下所有 .html，把失效的 img.heliar.top 链接替换为 jsDelivr 直链，替换完会列出改了哪些文件
 
 ## 双击没反应的备用方式（命令行）
